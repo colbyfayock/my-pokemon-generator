@@ -14,13 +14,24 @@ import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
   const [attributes, setAttributes] = useState();
+  const [image, setImage] = useState();
 
   async function handleOnGenerate(e) {
     e.preventDefault();
 
     setAttributes(undefined);
+    setImage(undefined);
+
     const data = await fetch('/api/pokemon/create').then(res => res.json());
     setAttributes(data.attributes);
+
+    const { image } = await fetch('/api/pokemon/image', {
+      method: 'POST',
+      body: JSON.stringify({
+        description: data.attributes.appearance
+      })
+    }).then(res => res.json());
+    setImage(image);
   }
 
   return (
@@ -34,7 +45,7 @@ export default function Home() {
       <Section>
         <Container className={styles.cardContainer}>
           <div className={styles.card}>
-            <Card attributes={attributes} />
+            <Card attributes={attributes} image={image} />
             <h2>Backstory</h2>
             {attributes?.backstory && <p>{ attributes.backstory }</p>}
           </div>
