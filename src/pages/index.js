@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Head from 'next/head'
 
 import Layout from '@/components/Layout';
@@ -12,6 +13,16 @@ import Card from '@/components/Card';
 import styles from '@/styles/Home.module.scss'
 
 export default function Home() {
+  const [attributes, setAttributes] = useState();
+
+  async function handleOnGenerate(e) {
+    e.preventDefault();
+
+    setAttributes(undefined);
+    const data = await fetch('/api/pokemon/create').then(res => res.json());
+    setAttributes(data.attributes);
+  }
+
   return (
     <Layout>
       <Head>
@@ -23,9 +34,9 @@ export default function Home() {
       <Section>
         <Container className={styles.cardContainer}>
           <div className={styles.card}>
-            <Card />
+            <Card attributes={attributes} />
             <h2>Backstory</h2>
-            <p>Backstory</p>
+            {attributes?.backstory && <p>{ attributes.backstory }</p>}
           </div>
           <Form className={styles.form}>
             <h2>Create a new Pokémon!</h2>
@@ -34,7 +45,7 @@ export default function Home() {
               <FormInput name="type" />
             </FormRow> */}
             <FormRow>
-              <Button>Generate</Button>
+              <Button onClick={handleOnGenerate}>Generate</Button>
             </FormRow>
           </Form>
         </Container>
