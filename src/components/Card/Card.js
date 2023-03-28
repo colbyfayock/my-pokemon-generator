@@ -3,9 +3,15 @@ import { POKEMON_TYPES, POKEMON_ATTRIBUTES }  from '@/data/pokemon';
 import styles from './Card.module.scss';
 
 const Card = ({ attributes = POKEMON_ATTRIBUTES, image = {} }) => {
-  const { Icon: IconType, color: colorType } = POKEMON_TYPES[attributes.type?.toLowerCase()];
-  const { Icon: IconWeakness, color: colorWeakness } = POKEMON_TYPES[attributes.weakness?.toLowerCase()];
-  const { Icon: IconResistance, color: colorResistance } = POKEMON_TYPES[attributes.resistance?.toLowerCase()];
+
+  const type = attributes.type?.toLowerCase();
+  const weakness = attributes.weakness?.toLowerCase();
+  const resistance = attributes.resistance?.toLowerCase();
+
+  const { Icon: IconType, color: colorType } = POKEMON_TYPES[type] || POKEMON_TYPES['default'];
+  const { Icon: IconWeakness, color: colorWeakness } = POKEMON_TYPES[weakness] || POKEMON_TYPES['default'];
+  const { Icon: IconResistance, color: colorResistance } = POKEMON_TYPES[resistance] || POKEMON_TYPES['default'];
+
   return (
     <div className={styles.card}>
       <span className={styles.cardContent} style={{ backgroundColor: colorType }}>
