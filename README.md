@@ -1,10 +1,10 @@
 # Custom Pokémon Generator with OpenAI ChatGPT & DALL-E in Next.js
 
-Demo for tutorial [How to Use AI to Generate a Custom Pokémon with OpenAI ChatGPT & DALL-E](https://youtube.com/colbyfayock)
+Demo for tutorial [How to Use AI to Generate a Custom Pokémon with OpenAI ChatGPT & DALL-E](https://www.youtube.com/watch?v=BQPqqQLGweM)
 
-📝 Article: https://spacejelly.dev/
+📝 Article: https://spacejelly.dev/posts/how-to-use-ai-to-generate-a-custom-pokemon-with-openai-chatgpt-dall-e/
 
-📺 YouTube: https://youtube.com/colbyfayock
+📺 YouTube: https://www.youtube.com/watch?v=BQPqqQLGweM
 
 ## More tutorials and walkthroughs
 
