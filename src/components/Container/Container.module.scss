@@ -31,4 +31,8 @@
   &[data-container-size="content"] {
     max-width: $display-page-width-content;
   }
+
+  &[data-container-size="tiny"] {
+    max-width: $display-page-width-tiny;
+  }
 }

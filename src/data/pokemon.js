@@ -1,27 +1,28 @@
 export const POKEMON_ATTRIBUTES = {
-  appearance: 'Appearance',
+  appearance: ' ',
   attack: {
-    name: 'Name',
-    description: 'Description',
+    name: ' ',
+    description: ' ',
     hitPoints: 0
   },
-  backstory: 'Backstory',
-  category: 'Category',
-  description: 'Description',
+  backstory: ' ',
+  category: ' ',
+  description: ' ',
   hitPoints: 0,
   lengthInches: 0,
-  name: 'Name',
+  name: ' ',
   power: {
-    name: 'Name',
-    description: 'Description',
+    name: ' ',
+    description: ' ',
     hitPoints: 0
   },
-  resistance: 'Default',
+  resistance: ' ',
   retreatCost: 0,
-  type: 'Default',
-  weakness: 'Default',
+  type: ' ',
+  weakness: ' ',
   weightPounds: 0
 };
+
 // Sample Data
 // 
 // export const POKEMON_ATTRIBUTES = {

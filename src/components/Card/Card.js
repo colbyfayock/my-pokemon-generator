@@ -2,7 +2,11 @@ import { POKEMON_TYPES, POKEMON_ATTRIBUTES }  from '@/data/pokemon';
 
 import styles from './Card.module.scss';
 
-const Card = ({ attributes = POKEMON_ATTRIBUTES, image = {} }) => {
+const Card = ({ attributes: userAttributes, image: userImage, isLoading = false }) => {
+  const isEmpty = !userAttributes && !userImage && !isLoading;
+
+  const attributes = userAttributes || POKEMON_ATTRIBUTES;
+  const image = userImage || {};
 
   const type = attributes.type?.toLowerCase();
   const weakness = attributes.weakness?.toLowerCase();
@@ -13,7 +17,7 @@ const Card = ({ attributes = POKEMON_ATTRIBUTES, image = {} }) => {
   const { Icon: IconResistance, color: colorResistance } = POKEMON_TYPES[resistance] || POKEMON_TYPES['default'];
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-is-empty={isEmpty}>
       <span className={styles.cardContent} style={{ backgroundColor: colorType }}>
         <span className={styles.cardHead}>
           <span>
@@ -32,7 +36,7 @@ const Card = ({ attributes = POKEMON_ATTRIBUTES, image = {} }) => {
             </span>
           </span>
         </span>
-        <span className={styles.cardImage}>
+        <span className={styles.cardImage} data-is-loading={isLoading}>
           {image?.url && <img src={image.url} />}
         </span>
         <span className={styles.cardAttributes}>

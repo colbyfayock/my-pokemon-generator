@@ -16,7 +16,8 @@ const Header = () => {
         </p>
         <ul className={styles.headerLinks}>
           <li>
-            <a href="https://github.com/colbyfayock" rel="noreferrer">
+            <a href="https://github.com/colbyfayock/my-pokemon-generator" rel="noreferrer">
+              <span className="sr-only">GitHub</span>
               <FaGithub />
             </a>
           </li>

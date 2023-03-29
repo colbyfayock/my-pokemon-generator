@@ -1,11 +1,26 @@
 @import "@/styles/settings/_settings";
 
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
 .card {
+  
   display: block;
   width: 24em;
   background-color: #ffe064;
   padding: 1em;
   border-radius: 1em;
+
+  &[data-is-empty="true"] {
+    opacity: .5;
+  }
+
 }
 
 .cardContent {
@@ -92,7 +107,13 @@
   overflow: hidden;
   aspect-ratio: 400 / 300;
   border: solid 5px lightgray;
-  background-color: white;
+  background-color: lighten(lightgray, 5);
+
+  &[data-is-loading="true"] {
+    background: linear-gradient(90deg, #eff1f1 30%, #f7f8f8 50%, #eff1f1 70%);
+    background-size: 400%;
+    animation: loading 1.2s ease-in-out infinite;
+  }
 
   &,
   img {

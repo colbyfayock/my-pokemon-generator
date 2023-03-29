@@ -47,10 +47,32 @@
 
   h2 {
     font-size: 2em;
+    margin-bottom: .5em;
+  }
+
+  p {
+    margin-bottom: 2.5em;
   }
 
   button {
     font-size: 1.2em;
   }
   
+}
+
+.attributesContainer {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ul {
+    padding-left: 1.2em;
+  }
+
+  p,
+  ul {
+    margin-top: 0;
+  }
+
 }
