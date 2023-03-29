@@ -6,6 +6,8 @@ Demo for tutorial [How to Use AI to Generate a Custom Pokémon with OpenAI ChatG
 
 📺 YouTube: https://www.youtube.com/watch?v=BQPqqQLGweM
 
+🚀 Demo: https://my-pokemon-generator.vercel.app
+
 ## More tutorials and walkthroughs
 
 🐦 [Follow me on Twitter](https://twitter.com/colbyfayock)
