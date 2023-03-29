@@ -22,7 +22,6 @@ export const POKEMON_ATTRIBUTES = {
   weakness: ' ',
   weightPounds: 0
 };
-
 // Sample Data
 // 
 // export const POKEMON_ATTRIBUTES = {

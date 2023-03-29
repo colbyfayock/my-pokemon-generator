@@ -51,13 +51,19 @@
   }
 
   p {
-    margin-bottom: 2.5em;
+    margin-top: 0;
   }
 
   button {
     font-size: 1.2em;
   }
   
+}
+
+.formTip {
+  font-size: .8em;
+  font-style: italic;
+  color: #787878;
 }
 
 .attributesContainer {

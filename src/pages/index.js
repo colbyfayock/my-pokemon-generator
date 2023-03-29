@@ -73,9 +73,9 @@ export default function Home() {
             )}
             {error && (
               <>
-                <h2>Uh oh, something went wrong!</h2>
-                <p>Error: { error }</p>
-                <p>Try again!</p>
+                <h3>Uh oh, something went wrong...</h3>
+                <p>Click Generate to try again!</p>
+                <p className={styles.formTip}>Tip: The free tier for API Endpoints times out at 10s, so if the Create network request took longer than 10s, that&apos;s why!</p>
               </>
             )}
           </Form>
