@@ -40,7 +40,7 @@ const Card = ({ attributes: userAttributes, image: userImage, isLoading = false 
           {image?.url && <img src={image.url} />}
         </span>
         <span className={styles.cardAttributes}>
-          { attributes?.category } Pokemon. Ht: { attributes?.lengthInches }", WT: {attributes?.weightPounds?.toFixed(2)} lbs.
+          { attributes?.category } Pokemon. Ht: { attributes?.lengthInches }&quot;, WT: {attributes?.weightPounds?.toFixed(2)} lbs.
         </span>
         <span className={styles.cardPower}>
           <strong>{ attributes?.attack?.name }</strong> { attributes?.attack?.description }
