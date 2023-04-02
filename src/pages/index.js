@@ -58,6 +58,7 @@ export default function Home() {
         <Container className={styles.cardContainer} size="content">
           <div className={styles.card}>
             <Card attributes={attributes} image={image} isLoading={isLoading} />
+            {attributes && (<p className={styles.seeBio}>See bio below!</p>)}
           </div>
           <Form className={styles.form}>
             <h2>Create a new Pokémon!</h2>
@@ -78,6 +79,16 @@ export default function Home() {
               </>
             )}
           </Form>
+        </Container>
+      </Section>
+      <Section>
+        <Container className={styles.learnContainer}>
+          <h3>
+            Learn how to use ChatGPT and DALL-E APIs to build your own!
+          </h3>
+          <p>
+            <a href="https://www.youtube.com/watch?v=BQPqqQLGweM">Pokémon Generator with ChatGPT & DALL-E API in Next.js</a>
+          </p>
         </Container>
       </Section>
       <Section>
